@@ -12,7 +12,7 @@ public class Joueur implements Comparable<Joueur>{
 	private int scoreJoueur ;
 	
 	
-	//Getteur et setter
+	//Getteur et setteur
 	public int getNumJoueur() {
 		return this.numJoueur;
 	}

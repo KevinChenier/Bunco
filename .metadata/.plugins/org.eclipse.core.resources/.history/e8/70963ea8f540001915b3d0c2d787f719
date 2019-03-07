@@ -12,12 +12,9 @@ public class Joueur implements Comparable<Joueur>{
 	private int scoreJoueur ;
 	
 	
-	//Getteur et setter
+	//Getteur et setteur
 	public int getNumJoueur() {
 		return this.numJoueur;
-	}
-	public int getScore() {
-		return this.scoreJoueur;
 	}
 	public void setNumJoueur(int numero) {
 		this.numJoueur = numero;

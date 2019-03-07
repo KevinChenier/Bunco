@@ -1,0 +1,10 @@
+package frameWork;
+/**
+ * 
+ * 
+ * @author laurent sieu , Kevin Chenie-Morales
+ *
+ */
+public class Joueur implements Comparable{
+
+}
