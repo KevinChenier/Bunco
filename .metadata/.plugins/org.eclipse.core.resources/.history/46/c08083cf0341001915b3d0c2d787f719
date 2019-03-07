@@ -7,10 +7,10 @@ public class De implements Comparable<De> {
 	private int nbFacesDe;
 	private int valeurDes;
 	
-	public De(int nbFacesDe) {
-		this.nbFacesDe = nbFacesDe;
-		this.valeurDes = 0;
-	}
+	
+	
+	
+	
 	@Override
 	public int compareTo(De arg0) {
 		return 0;

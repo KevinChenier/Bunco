@@ -1,0 +1,16 @@
+package frameWork;
+
+public class CollectionJoueur {
+	//Constante
+	private final int nbMaxJoueur = 99;
+	//
+	Joueur[] tableauJoueur = new Joueur[nbMaxJoueur];
+	
+	public void ajouterJoueur(Joueur joueur) {
+		for(int i =0 ; i<tableauJoueur.length ; i++) {
+			if (tableauJoueur[i]== null) {
+				tableauJoueur[i]= joueur;
+			} 
+		}
+	}
+}

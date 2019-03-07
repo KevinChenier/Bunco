@@ -11,11 +11,6 @@ public class Joueur implements Comparable<Joueur>{
 	private String nom;
 	private int scoreJoueur ;
 	
-	public Joueur(int numJoueur, String nom) {
-		super();
-		this.numJoueur = numJoueur;
-		this.nom = nom;
-	}
 	@Override
 	public int compareTo(Joueur o) {
 		
