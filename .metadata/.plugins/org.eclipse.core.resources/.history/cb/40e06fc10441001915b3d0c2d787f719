@@ -11,12 +11,9 @@ public class De implements Comparable<De> {
 		this.nbFacesDe = nbFacesDe;
 		this.valeurDes = 0;
 	}
-	/**
-	 * A T T E N T I O N P A S T E R M I N E R
-	 */
 	@Override
-	public int compareTo(De unDe) {
-		return this.getValeurDes() == unDe.getValeurDes() ? 0:-1 ;
+	public int compareTo(De arg0) {
+		return 0;
 	}
 	//Getter setter
 	public int getNbFacesDe() {
