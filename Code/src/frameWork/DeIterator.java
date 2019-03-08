@@ -20,7 +20,7 @@ public class DeIterator implements Iterator{
 
 	@Override
 	public Object next() {
-		CollectionDe collDe = listeDe[positionDe];
+		CollectionList collDe = listeDe[positionDe];
 		positionDe = positionDe + 1;
 		return collDe;
 	}

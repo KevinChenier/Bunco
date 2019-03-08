@@ -1,6 +1,6 @@
 package frameWork;
 
-public abstract class Collection<T> {
+public abstract class CollectionList<T> {
 	//Type generique
     private T[] elements;
     // Grandeur courante de la collection.
