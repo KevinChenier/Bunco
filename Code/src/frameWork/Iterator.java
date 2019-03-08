@@ -1,6 +1,6 @@
 package frameWork;
 
-public interface Iterator {
-	public void hasNext();
-	public void next();
+public interface Iterator<T> {
+	boolean hasNext();
+	public Object next();
 }
