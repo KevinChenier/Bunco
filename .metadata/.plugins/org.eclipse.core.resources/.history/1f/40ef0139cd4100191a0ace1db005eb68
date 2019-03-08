@@ -1,0 +1,31 @@
+package frameWork;
+
+public class CollectionJoueur {
+	// Constante
+	static final int largeurListe = 99;
+	Joueur[] maListeDeJoueur;
+	//Attributs
+	
+	/**
+	 * 
+	 * @param 
+	 */
+	
+	
+	
+	
+	public void ajouterJoueur(Joueur unJoueur) {
+
+	}
+
+	/**
+	 * I N C O M P L E T
+	 * 
+	 * @return
+	 */
+	public Iterator createIterator() {
+		Iterator iterateur = null;
+		return iterateur;
+	}
+
+}

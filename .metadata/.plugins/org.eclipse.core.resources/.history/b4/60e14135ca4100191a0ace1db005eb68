@@ -1,0 +1,13 @@
+package frameWork;
+
+public class CollectionJoueur {
+	
+	
+	
+	public void ajouterJoueur(Joueur unJoueur) {
+		
+	}
+	public Iterator createIterator() {
+		
+	}
+}

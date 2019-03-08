@@ -8,18 +8,44 @@ package frameWork;
 public class Joueur implements Comparable<Joueur>{
 	//Attributs
 	private int numJoueur;
-	private String nom;
+	//private String nom;
 	private int scoreJoueur ;
 	
-	public Joueur(int numJoueur, String nom) {
+	
+	/**
+	 * Constructeur de joueur
+	 * @param numJoueur
+	 */
+	public Joueur(int numJoueur) {
 		super();
 		this.numJoueur = numJoueur;
-		this.nom = nom;
+		//this.nom = nom;
 	}
+	//Redifinition de equals
 	@Override
-	public int compareTo(Joueur o) {
-		
-		return 0;
+	public boolean equals(Object obj) {
+        boolean IsNotEquals = false;
+        boolean equals = true;
+        if (obj instanceof Joueur) {
+            Joueur unJoueur = (Joueur) obj;
+            if(unJoueur.getScore() == scoreJoueur && unJoueur.getNumJoueur() == numJoueur)
+            {
+            	return equals;
+            }
+        }
+        return IsNotEquals;
+    }
+	//Redefiniition de compareTo
+	@Override
+	public int compareTo(Joueur unJoueur) {
+		 if(this.getScore() == unJoueur.getScore()) {
+			 return 0;
+		 }
+		 else if (this.getScore()<unJoueur.getScore()) {
+			return -1;
+		 }
+		 else {return 1;
+		 }
 	}
 	//Getteur et setter
 	public int getNumJoueur() {

@@ -1,0 +1,6 @@
+package frameWork;
+
+public interface MesStrategies {
+	//
+	public void stategieJeu();
+}
