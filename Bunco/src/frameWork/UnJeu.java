@@ -6,7 +6,8 @@ public abstract class UnJeu {
 	private MesStrategies stratUtiliser;
 	private int nbDeTours= 0 ;
 	//Liste collection de et Joueur
-	
+	private CollectionDe laListeDeDe;
+	private CollectionJoueur laListeDeJoueur;
 	/**
 	 * Constructeur dun jeu. Strategie requise. 
 	 * @param stratUtiliser
