@@ -4,7 +4,6 @@ public class CollectionDe {
 	
 	// Constante
 	private int indexCollection;
-	private int longueurCollection;
 	//La liste
 	De[] maListeDeDes;
 	

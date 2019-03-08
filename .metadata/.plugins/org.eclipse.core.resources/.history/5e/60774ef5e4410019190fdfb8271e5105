@@ -3,7 +3,6 @@ package frameWork;
 public class CollectionJoueur {
 	// Constante
 	private int indexCollection;
-	private int longueurCollection;
 	//La liste
 	Joueur[] maListeDeJoueur;
 	//Attributs

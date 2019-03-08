@@ -3,8 +3,7 @@ package frameWork;
 public class CollectionDe {
 	
 	// Constante
-	private int indexCollection;
-	private int longueurCollection;
+s
 	//La liste
 	De[] maListeDeDes;
 	

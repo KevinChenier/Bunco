@@ -2,8 +2,7 @@ package frameWork;
 
 public class CollectionJoueur {
 	// Constante
-	private int indexCollection;
-	private int longueurCollection;
+	static final int largeurListe = 99;
 	//La liste
 	Joueur[] maListeDeJoueur;
 	//Attributs
