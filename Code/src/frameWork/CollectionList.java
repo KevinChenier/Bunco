@@ -1,12 +1,12 @@
 package frameWork;
 
-public abstract class CollectionList<T> {
+public class CollectionList<T> implements Iterable<T> {
 	//Type generique
     private T[] elements;
     // Grandeur courante de la collection.
     private int size;
     
-    public Collection() {
+    public CollectionList() {
         this.elements = (T[]) new Object[0];
         size = 0;
     }
@@ -72,5 +72,10 @@ public abstract class CollectionList<T> {
     public void clear() {
         elements = (T[]) new Object[0];
     }
+
+	@Override
+	public Iterator<T> creerIterator() {
+		return new CollectionIterator<T>(this.elements);
+	}
 
 }

@@ -2,7 +2,7 @@ package frameWork;
 
 public class DeIterator implements Iterator{
 	//Attributs
-	CollectionDe[] listeDe;
+	CollectionList listeDe;
 	int positionDe = 0;
 	/**
 	 * TODO(non-Javadoc)
