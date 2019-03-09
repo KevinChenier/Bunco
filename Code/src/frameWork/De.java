@@ -16,7 +16,13 @@ public class De implements Comparable<De> {
 	 */
 	@Override
 	public int compareTo(De unDe) {
-		return this.getValeurDes() == unDe.getValeurDes() ? 0:-1 ;
+		if(this.getScore() == unJoueur.getScore()) {
+			 return 0;
+		 }
+		 else if (this.getScore()<unJoueur.getScore()) {
+			return -1;
+		 }
+		 else {return 1;
 	}
 	//Getter setter
 	public int getNbFacesDe() {
