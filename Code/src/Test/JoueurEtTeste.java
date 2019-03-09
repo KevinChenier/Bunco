@@ -19,28 +19,37 @@ class JoueurEtTeste {
 	void test() {
 		fail("Not yet implemented");
 	}
-	//Teste Constructeur
+	//Test Numero de joueurs
 	public void NumeroJoueursTeste() {
 		int valeurJoueur = 888;
 		Joueur personne = new Joueur (888);
-		assertEquals(valeurJoueur,personne.getNumJoueur());
+		assertEquals(valeurJoueur,personne.getNumeroJoueur());
 	}
-	//Teste set num
 	@Test
 	public void LeSetNumJoueurTest() {
 		Joueur personne = new Joueur(debut);
-		personne.setNumJoueur(fin);
-		assertEquals(fin,personne.getNumJoueur());
+		personne.setNumeroJoueur(fin);
+		assertEquals(fin,personne.getNumeroJoueur());
 	}
-	//Teste get num
 	@Test
-	public void testerLeGetNumJoueur() {
+	public void LeGetNumJoueurTest() {
 		Joueur personne = new Joueur(debut);
-		int unChiffre = personne.getNumJoueur();
+		int unChiffre = personne.getNumeroJoueur();
 		assertEquals(debut,unChiffre);
+	}
+	//Teste des scores
+	@Test	
+	public void scoresJoueurTest() {
+		int score = 88;
+		Joueur personne = new Joueur(debut);
+		personne.setScore(score);
+		assertEquals(joueur. )
 	}
 	//TODO FONCTIONNALITE DE BASE APPEL NORMAL ET TYPIQUE ?
 	
-	//Tester les cas limites
+	//TODO Tester les cas limites
+	
+	//Tester null
+	
 	
 }
