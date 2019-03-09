@@ -11,5 +11,5 @@ public interface Iterator<T> {
 	 * Methode qui retourne l'objet qui suit l'objet courant.
 	 * @return l'objet suivant.
 	 */
-	public Object next();
+	public T next();
 }

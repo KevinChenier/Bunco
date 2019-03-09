@@ -1,6 +1,8 @@
 package frameWork;
 
 public interface MesStrategies {
-	//Patron Strategie
-	public void stategieJeu();
+
+	public void calculerScoreTour(Joueur joueur, CollectionList<De> listeDes, int tourCourant);
+	
+	public CollectionList<Joueur> calculerLeVainqueur(CollectionList<Joueur> listeJoueurs);
 }

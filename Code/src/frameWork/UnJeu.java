@@ -1,32 +1,106 @@
 package frameWork;
 
 public abstract class UnJeu {
-	//A T T R I B U T S
-	//Strategie a utiliser lors dun jeu.
-	private MesStrategies stratUtiliser;
-	private int nbDeTours= 0 ;
-	//Liste collection de et Joueur
-	private CollectionDe laListeDeDe;
-	private CollectionJoueur laListeDeJoueur;
+
+	// Strategie a utiliser lors dun jeu.
+	private MesStrategies strategie;
+	
+	// Le tour de la partie.
+	private int tour= 0 ;
+	
+	// La collection de dees.
+	private CollectionList<De> listeDes;
+	
+	// La collection de joueurs
+	private CollectionList<Joueur> listeJoueurs;
+	
+	public UnJeu(MesStrategies strategie) {
+		this.strategie = strategie;
+		initPartie();
+	}
+	
 	/**
-	 * Constructeur dun jeu. Strategie requise. 
-	 * @param stratUtiliser
+	 * Initialise la partie.
 	 */
-	public UnJeu(MesStrategies stratUtiliser) {
-		this.stratUtiliser = stratUtiliser;
-		initUnePartie();
-	}
-	public void initUnePartie() {
-		//I N C O M P L E T
+	public void initPartie() {
+		this.listeDes = this.initialiserDes();
+		this.listeJoueurs = this.initialiserJoueurs();
 	}
 	
-	//Getter setter
-	public int getNbDeTours() {
-		return nbDeTours;
-	}
-	public void setNbDeTours(int nbDeTours) {
-		this.nbDeTours = nbDeTours;
-	}
+	/**
+     * Joue la partie jusqu'a temps que l'on atteigne le nombre maximum de tours.
+     */
+    public void jouerTour() {
+    	
+        System.out.println("Nombre de joueurs : " + listeJoueurs.size() + " , Nombre de tours : " + this.getNombreToursMax() + " , Nombre de dees : " + listeDes.size());
+        
+        while (this.tour++ <= this.getNombreToursMax()) {
+        	
+            Iterator<Joueur> iterateurJoueur = this.listeJoueurs.creerIterator();
+            
+            while (iterateurJoueur.hasNext()) {
+                strategie.calculerScoreTour(iterateurJoueur.next(), this.listeDes, this.tour);
+            }
+        }
+
+        System.out.println();
+
+        for (int i = 0; i < listeJoueurs.size(); i++) {
+            System.out.println("Score final : Joueur : " + listeJoueurs.get(i).getNumeroJoueur() +  ", Score : " + listeJoueurs.get(i).getScore());
+        }
+        
+        this.calculerLeVainqueur();
+    }
 	
+	/**
+	 * Initialise les joueurs du jeu.
+	 * @return La collection de joueurs.
+	 */
+	protected abstract CollectionList<Joueur> initialiserJoueurs();
+
+	/**
+	 * Initialise les des du jeu.
+	 * @return La collection de des.
+	 */
+	protected abstract CollectionList<De> initialiserDes();
+	
+	/**
+	 * Retourne le nombre de tours max que le jeu fait.
+	 * @return tour.
+	 */
+	protected abstract int getNombreToursMax(); 
+	
+	/**
+     * Calcule le vainqueur.
+     */
+    public void calculerLeVainqueur() {
+        strategie.calculerLeVainqueur(this.listeJoueurs);
+    }
+
+    /**
+     * Retourne la liste des joueurs.
+     *
+     * @return La liste des joueurs.
+     */
+    public CollectionList<Joueur> getListeJoueurs() {
+        return listeJoueurs;
+    }
+
+    /**
+     * Retourne la liste des des.
+     *
+     * @return La liste des des.
+     */
+    public CollectionList<De> getListeDes() {
+        return listeDes;
+    }
+	
+	/**
+	 * Retourne le nombre de tour courant.
+	 * @return tour.
+	 */
+	public int getTourCourant() {
+		return tour;
+	}
 }	
 
