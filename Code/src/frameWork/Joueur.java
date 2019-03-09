@@ -2,40 +2,71 @@ package frameWork;
 /**
  * 
  * 
- * @author laurent sieu , Kevin Chenie-Morales
+ * @author laurent sieu , Kevin Chenier
  *
  */
 public class Joueur implements Comparable<Joueur>{
-	//Attributs
-	private int numJoueur;
-	//private String nom;
-	private int scoreJoueur ;
 	
+	// Numero du joueur.
+	private int numero;
+	
+	// Score du joueur.
+	private int score ;
+	
+	public Joueur(int numJoueur) {
+		this.numero = numJoueur;
+	}
 	
 	/**
-	 * Constructeur de joueur
-	 * @param numJoueur
+	 * Retourne le numero du joueur.
+	 * @return numero.
 	 */
-	public Joueur(int numJoueur) {
-		super();
-		this.numJoueur = numJoueur;
-		//this.nom = nom;
+	public int getNumeroJoueur() {
+		return this.numero;
 	}
-	//Redifinition de equals
+	
+	/**
+	 * Retourn le score du joueur.
+	 * @return score.
+	 */
+	public int getScore() {
+		return this.score;
+	}
+	
+	/**
+	 * Set le numero du joueur.
+	 * @param numero
+	 */
+	public void setNumeroJoueur(int numero) {
+		this.numero = numero;
+	}
+	
+	/**
+	 * Set le score du joueur.
+	 * @param score
+	 */
+	public void setScore(int score) {
+		this.score = score;
+	}
+	
 	@Override
 	public boolean equals(Object obj) {
-        boolean IsNotEquals = false;
-        boolean equals = true;
+
         if (obj instanceof Joueur) {
+        	
             Joueur unJoueur = (Joueur) obj;
-            if(unJoueur.getScore() == scoreJoueur && unJoueur.getNumJoueur() == numJoueur)
+            
+            if(unJoueur.getScore() == this.score && unJoueur.getNumeroJoueur() == this.numero)
             {
-            	return equals;
+            	return true;
+            } else {
+            	return false;
             }
+        } else {
+        	return false;
         }
-        return IsNotEquals;
     }
-	//Redefiniition de compareTo
+
 	@Override
 	public int compareTo(Joueur unJoueur) {
 		 if(this.getScore() == unJoueur.getScore()) {
@@ -46,20 +77,5 @@ public class Joueur implements Comparable<Joueur>{
 		 }
 		 else {return 1;
 		 }
-	}
-	//Getteur et setter
-	public int getNumJoueur() {
-		return this.numJoueur;
-	}
-	public int getScore() {
-		return this.scoreJoueur;
-	}
-	public void setNumJoueur(int numero) {
-		this.numJoueur = numero;
-	}
-	public void setScore(int score) {
-		this.scoreJoueur = score;
-	}
-	
-	
+	}	
 }

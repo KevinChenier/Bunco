@@ -1,42 +1,86 @@
 package frameWork;
 import java.util.Random;
+
 public class De implements Comparable<De> {
+	
 	//valeur random
 	private static final Random chiffreAleatoire = new Random();
-	//Attributs 
-	private int nbFacesDe;
-	private int valeurDes;
+	
+	// Nombre de faces que le de a.
+	private int nombreFaces;
+	
+	// Valeur du de a un moment
+	private int valeur = 0;
 	
 	public De(int nbFacesDe) {
-		this.nbFacesDe = nbFacesDe;
-		this.valeurDes = 0;
+		this.nombreFaces = nbFacesDe;
 	}
-	/**
-	 * A T T E N T I O N P A S T E R M I N E R
-	 */
+
+    /**
+     * Retourne un nombre aleatoire entre 1 et le nombre de faces.
+     * @return Le nombre aleatoire
+     */
+    public int lancerDe() {
+        return this.valeur = chiffreAleatoire.nextInt(this.getNbFaces()) + 1;
+    }
+
+    /**
+     * Retourne la valeur du de.
+     * @return Valeur du de
+     */
+    public int getValeur() {
+        return this.valeur;
+    }
+
+    /**
+     * Retourne le nombre de faces du de.
+     * @return Nombre de faces du de
+     */
+    public int getNbFaces() {
+        return this.nombreFaces;
+    }
+
+    /**
+     * Set une valeur pour le de.
+     * @param valeur Valeur à attribuer au dé
+     */
+    public void setValeur(int valeur) throws Exception {
+    	if(valeur > this.getNbFaces() || valeur < 0)
+    		System.err.println("Can't set value of De because value is bigger than nbFaces or smaller than 0");
+    	else {
+    		this.valeur = valeur;
+    	}
+    }
+	
 	@Override
 	public int compareTo(De unDe) {
-		if(this.getScore() == unJoueur.getScore()) {
+		
+		if(this.getValeur() == unDe.getValeur()) {
 			 return 0;
 		 }
-		 else if (this.getScore()<unJoueur.getScore()) {
+		 else if (this.getValeur() < unDe.getValeur()) {
 			return -1;
 		 }
-		 else {return 1;
-	}
-	//Getter setter
-	public int getNbFacesDe() {
-		return nbFacesDe;
-	}
-	public void setNbFacesDe(int nbFacesDe) {
-		this.nbFacesDe = nbFacesDe;
-	}
-	public int getValeurDes() {
-		return valeurDes;
-	}
-	public void setValeurDes(int valeurDes) {
-		this.valeurDes = valeurDes;
-	}
+		 else {
+			 return 1;
+		 }
+	}	
 	
-	
+	@Override
+    public boolean equals(Object obj) {
+
+        if (obj instanceof De) {
+        	
+            De de = (De) obj;
+            
+            if(de.getNbFaces() == this.nombreFaces && de.getValeur() == this.valeur) {
+            	return true;
+            }
+            else {
+            	return false;
+            }
+        } else {
+        	return false;
+        }
+    }
 }
