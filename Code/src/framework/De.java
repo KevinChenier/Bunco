@@ -65,6 +65,7 @@ public class De implements Comparable<De> {
 		 }
 	}	
 	
+	
 	@Override
     public boolean equals(Object obj) {
 

@@ -7,6 +7,13 @@ import org.junit.jupiter.api.Test;
 import framework.Joueur;
 
 import org.junit.*;
+/**
+ * JUnit de test
+ * Teste les situations Null , egal , non egal , les attributs et leurs differences
+ * Teste aussi les setters et les getters
+ * @author laurent sieu 
+ *
+ */
 class JoueurEtTeste {
 	//Constantes
 	final static int debut = 8;
@@ -15,11 +22,12 @@ class JoueurEtTeste {
 	/**
 	 * whats is this 
 	 */
-	@Test
+	//@Test
 	void test() {
 		fail("Not yet implemented");
 	}
 	//Test Numero de joueurs
+	@Test
 	public void NumeroJoueursTeste() {
 		int valeurJoueur = 888;
 		Joueur personne = new Joueur (888);
@@ -45,6 +53,7 @@ class JoueurEtTeste {
 		personne.setScore(score);
 		assertEquals(personne.getScore(),score );	 
 	}
+	@Test
 	public void getScoresJoueurTest() {
 		int score = 8;
 		Joueur personne = new Joueur(debut);
@@ -52,6 +61,7 @@ class JoueurEtTeste {
 		assertEquals(personne.getScore(),score);
 	}
 	//compareTo
+	@Test
 	public void compareToEgalTest() {
 		int scorePareil = 11;
 		Joueur personne1 = new Joueur(1);
@@ -60,7 +70,8 @@ class JoueurEtTeste {
 		personne2.setScore(scorePareil);
 		assertEquals(personne1.compareTo(personne2),0);
 	}
-	public void compareToInferieur() {
+	@Test
+	public void compareToInferieurTest() {
 		int scoreSup = 2;
 		int scoreInf = 1;
 		Joueur personne1 = new Joueur(1);
@@ -69,6 +80,7 @@ class JoueurEtTeste {
 		personne2.setScore(scoreSup);
 		assertEquals(-1,personne1.compareTo(personne2));
 	}
+	@Test
 	public void compareToSuperieur() {
 		int scoreSup = 3;
 		int scoreInf = 2;
@@ -76,13 +88,23 @@ class JoueurEtTeste {
 		Joueur personne2 = new Joueur(2);
 		personne1.setScore(scoreInf);
 		personne2.setScore(scoreSup);
-		assertEquals(1,personne1.compareTo(personne2));
+		assertEquals(1,personne2.compareTo(personne1));
 	}
-	//TODO FONCTIONNALITE DE BASE APPEL NORMAL ET TYPIQUE ?
-	
-	//TODO Tester les cas limites
+	@Test
+	public void estEgal() {
+		Joueur j1= new Joueur(1);
+		Joueur j2= new Joueur(2);
+		j1.setScore(8);
+		j2.setScore(8);
+		assertEquals(j1.getScore(),j2.getScore());
+	}
 	
 	//Tester null
-	
+	@Test
+	public void estNonNull() {
+	Joueur j1= new Joueur(1);
+	j1.setScore(8);
+	assertNotNull(j1);
+	}
 	
 }
