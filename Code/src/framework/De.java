@@ -1,15 +1,17 @@
 package framework;
 import java.util.Random;
 
+/**
+ * Classe qui permet de construire un de.
+ * @author Kevin Chenier
+ *
+ */
 public class De implements Comparable<De> {
-	
-	//valeur random
+	// Valeur random qui sert a rouler un de.
 	private static final Random chiffreAleatoire = new Random();
-	
-	// Nombre de faces que le de a.
+	// Nombre de faces du de.
 	private int nombreFaces;
-	
-	// Valeur du de a un moment
+	// Valeur du de a un moment.
 	private int valeur = 0;
 	
 	public De(int nbFacesDe) {

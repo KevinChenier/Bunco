@@ -1,15 +1,13 @@
 package framework;
+
 /**
- * 
- * 
- * @author laurent sieu , Kevin Chenier
+ * Classe qui permet de construire un joueur.
+ * @author Laurent Sieu
  *
  */
 public class Joueur implements Comparable<Joueur>{
-	
 	// Numero du joueur.
 	private int numero;
-	
 	// Score du joueur.
 	private int score ;
 	

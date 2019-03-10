@@ -3,8 +3,8 @@ package bunco;
 import framework.*;
 
 /**
- * Fabrique utilise pour le jeu Bunco
- * @author Kevin
+ * Fabrique utilise pour le jeu Bunco.
+ * @author Kevin Chenier
  *
  */
 public class FabriqueJeuBunco extends FabriqueJeu {

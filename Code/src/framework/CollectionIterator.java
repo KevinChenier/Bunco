@@ -2,13 +2,14 @@ package framework;
 
 /**
  * Classe utilisee pour creer l'iterateur d'une collection.
- * @author Kevin
+ * @author Kevin Chenier
  *
  * @param <T>
  */
 public class CollectionIterator<T> implements Iterator<T> {
-
+	// Les elements de la collection.
 	private T[] elements;
+	// L'index courant de l'iterateur.
 	private int index= 0;
 	
 	public CollectionIterator (T[] elements){
@@ -22,6 +23,7 @@ public class CollectionIterator<T> implements Iterator<T> {
 		 return collectionElement;
      }
 
+	 @Override
      public boolean hasNext() {
     	 if(index >= elements.length || elements[index] == null) {
     		 return false;

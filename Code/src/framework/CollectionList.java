@@ -1,12 +1,19 @@
 package framework;
 
+/**
+ * Un collection d'objet de type generique.
+ * @author Kevin Chenier
+ *
+ * @param <T>
+ */
 public class CollectionList<T> implements Iterable<T> {
-	//Type generique
+	// Type generique
     private T[] elements;
     // Grandeur courante de la collection.
     private int size;
     
-    public CollectionList() {
+    @SuppressWarnings("unchecked")
+	public CollectionList() {
         this.elements = (T[]) new Object[0];
         size = 0;
     }
@@ -46,21 +53,22 @@ public class CollectionList<T> implements Iterable<T> {
      * @param object, object qui represente l'element qui est retourne a un index.
      */
     public void add(T object) {
-    	//Increment the size of the collection.
+    	// Incremente la grosseur de la collection
     	this.size++;
     	
-    	//Create a new temporary array that will first contain the elements currently in the collection, then the new object.
-        T[] tempArray = (T[]) new Object[this.size];
+    	// Cree un nouveau tableau temporaire contenant d'abord les elements de la collection, puis le nouvel objet.
+        @SuppressWarnings("unchecked")
+		T[] tempArray = (T[]) new Object[this.size];
      
-        //Add the current elements into the tempArray.
+        // Ajoute les elements au tableau temporaire
         for(int i = 0; i < this.elements.length; i++) {
         	tempArray[i] = this.elements[i];
         }
         
-        //Add the object in the last index.
+        // Ajoute l'objet passer en parametre au tableau temporaire
         tempArray[this.size - 1] = object;
         
-        //Reference the new tempArray to the current elements in the collection.
+        // Assigne les elements de la collection au tableau temporaire.
         this.elements = tempArray;
     }
 
@@ -85,7 +93,8 @@ public class CollectionList<T> implements Iterable<T> {
     /**
      * Cette methode qui efface la collection courante et initialise une nouvelle.
      */
-    public void clear() {
+    @SuppressWarnings("unchecked")
+	public void clear() {
         elements = (T[]) new Object[0];
     }
 
@@ -99,7 +108,7 @@ public class CollectionList<T> implements Iterable<T> {
         boolean equals = false;
         if (object instanceof CollectionList) {
         	
-            CollectionList collectionList = (CollectionList) object;
+            CollectionList<?> collectionList = (CollectionList<?>) object;
             
             // On verifie si les deux collections sont de meme grosseur.
             if (collectionList.size() == this.size()) {

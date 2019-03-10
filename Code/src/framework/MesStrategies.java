@@ -1,5 +1,10 @@
 package framework;
 
+/**
+ * Strategies de calculs pour un jeu.
+ * @author Laurent Sieu
+ *
+ */
 public interface MesStrategies {
 
 	/**

@@ -1,5 +1,10 @@
 package framework;
 
+/**
+ * Classe qui permet de creer une liste de des.
+ * @author Kevin Chenier
+ *
+ */
 public class FabriqueDe {
 
 	private FabriqueDe() { }

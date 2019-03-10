@@ -7,6 +7,12 @@ import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+/**
+ * JUnit de test
+ * Teste les calculs de vainqueurs, des points et la maintenance des joueurs.
+ * @author Kevin Chenier 
+ *
+ */
 public class StrategieBuncoTest {
 
     private CollectionList<Joueur> listeJoueur;

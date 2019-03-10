@@ -1,5 +1,11 @@
 package framework;
 
+/**
+ * Les classe qui en derive permettent de creer un iterateur.
+ * @author Kevin Chenier
+ *
+ * @param <T>
+ */
 public interface Iterator<T> {
 	/**
 	 * Determine si une liste detient encore un objet qui suit l'object courant.

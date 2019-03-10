@@ -1,5 +1,10 @@
 package framework;
 
+/**
+ * Classe abstraite qui permet de creer un jeu.
+ * @author Kevin
+ *
+ */
 public abstract class FabriqueJeu {
 
     protected FabriqueJeu() { }

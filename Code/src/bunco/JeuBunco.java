@@ -4,7 +4,7 @@ import framework.*;
 
 /**
  * Classe qui initialise le jeu Bunco.
- * @author Kevin
+ * @author Kevin Chenier
  *
  */
 public class JeuBunco extends UnJeu{

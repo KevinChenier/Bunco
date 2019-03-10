@@ -1,16 +1,17 @@
 package framework;
 
+/**
+ * Classe qui permet de creer un jeu.
+ * @author Laurent Sieu
+ *
+ */
 public abstract class UnJeu {
-
 	// Strategie a utiliser lors dun jeu.
 	private MesStrategies strategie;
-	
 	// Le tour de la partie.
 	private int tour= 0 ;
-	
 	// La collection de dees.
 	private CollectionList<De> listeDes;
-	
 	// La collection de joueurs
 	private CollectionList<Joueur> listeJoueurs;
 	

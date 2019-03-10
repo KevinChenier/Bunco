@@ -5,7 +5,7 @@ import framework.*;
 /**
  * Classe qui s'occupe des strategies utilisees dans le jeu Bunco pour calculer
  * les vainqueurs et les points des joueurs.
- * @author Kevin
+ * @author Kevin Chenier
  *
  */
 public class StrategieJeuBunco implements MesStrategies {

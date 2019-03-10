@@ -1,5 +1,10 @@
 package framework;
 
+/**
+ * Classe qui permet de creer une liste de joueurs.
+ * @author Kevin Chenier
+ *
+ */
 public class FabriqueJoueur {
 
 	private FabriqueJoueur () { }
