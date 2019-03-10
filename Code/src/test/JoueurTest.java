@@ -1,4 +1,4 @@
-package Test;
+package test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import framework.Joueur;
 
-import org.junit.*;
+
 /**
  * JUnit de test
  * Teste les situations Null , egal , non egal , les attributs et leurs differences.

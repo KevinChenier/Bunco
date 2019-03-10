@@ -1,18 +1,19 @@
-package Test;
+package test;
+
 import static org.junit.Assert.assertEquals;
+
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 
-import org.hamcrest.Matcher;
 import org.junit.Before;
 import org.junit.jupiter.api.Test;
 
 import bunco.JeuBunco;
 import framework.De;
+
 /**
  * JUnit de test
  * Teste les situations Null , egal , non egal , les attributs et leurs differences
