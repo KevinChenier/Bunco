@@ -24,7 +24,7 @@ class JoueurTest {
 	}
 
 	@Test
-	public void NumeroJoueursTeste() {
+	public void NumeroJoueurs() {
 		
 		int valeurJoueur = 888;
 		Joueur personne = new Joueur (888);
@@ -33,7 +33,7 @@ class JoueurTest {
 	}
 	
 	@Test
-	public void LeSetNumJoueurTest() {
+	public void LeSetNumJoueur() {
 		
 		Joueur personne = new Joueur(debut);
 		personne.setNumeroJoueur(fin);
@@ -41,7 +41,7 @@ class JoueurTest {
 		assertEquals(fin,personne.getNumeroJoueur());
 	}
 	@Test
-	public void LeGetNumJoueurTest() {
+	public void LeGetNumJoueur() {
 		
 		Joueur personne = new Joueur(debut);
 		int unChiffre = personne.getNumeroJoueur();
@@ -50,7 +50,7 @@ class JoueurTest {
 	}
 	
 	@Test	
-	public void setScoresJoueurTest() {
+	public void setScoresJoueur() {
 		
 		int score = 8;
 		Joueur personne = new Joueur(debut);
@@ -60,7 +60,7 @@ class JoueurTest {
 		assertEquals(personne.getScore(),score );	 
 	}
 	@Test
-	public void getScoresJoueurTest() {
+	public void getScoresJoueur() {
 		
 		int score = 8;
 		Joueur joueur = new Joueur(debut);
@@ -71,7 +71,7 @@ class JoueurTest {
 	}
 
 	@Test
-	public void compareToEgalTest() {
+	public void compareToEgal() {
 		
 		int scorePareil = 11;
 		Joueur joueur1 = new Joueur(1);
@@ -83,7 +83,7 @@ class JoueurTest {
 		assertEquals(joueur1.compareTo(joueur2),0);
 	}
 	@Test
-	public void compareToInferieurTest() {
+	public void compareToInferieur() {
 		
 		int scoreSuperieur = 2;
 		int scoreInferieur = 1;

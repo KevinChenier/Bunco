@@ -43,7 +43,7 @@ public class DeTest {
 		assertNotEquals(unDe1,unDe2);
 	}
 	@Test
-	public void setDeTest() throws Exception {
+	public void setDe() throws Exception {
 		
 		int uneValeur = 2 ;
 		De unDe = new De(8);
@@ -54,7 +54,7 @@ public class DeTest {
 	}
 	
 	@Test
-	public void deSuperieurTest() throws Exception{
+	public void deSuperieur() throws Exception{
 		
 		De deInf = new De(8);
 		De deSup = new De(8);
@@ -66,7 +66,7 @@ public class DeTest {
 	}
 
 	@Test
-	public void deInferieurTest() throws Exception{
+	public void deInferieur() throws Exception{
 		
 		De deInf = new De(8);
 		De deSup = new De(8);
@@ -78,7 +78,7 @@ public class DeTest {
 	}
 
 	@Test
-	public void memeValeurDeTest() throws Exception{
+	public void memeValeurDe() throws Exception{
 		
 		int memeValeur = 8;
 		
@@ -92,7 +92,7 @@ public class DeTest {
 	}
 
 	@Test
-	public void deNullTest() throws Exception{
+	public void deNull() throws Exception{
 		
 		try {
 		De de1 = new De(1);
@@ -110,7 +110,7 @@ public class DeTest {
 	}
 	
 	@Test
-	public void estNonNullTest() throws Exception {
+	public void estNonNull() throws Exception {
 		
 		De unDe = new De(8);
 		
@@ -120,7 +120,7 @@ public class DeTest {
 	}
 
 	@Test
-	public void lancerLeDeTest() {
+	public void lancerLeDe() {
 		
 		De unDe = new De(JeuBunco.NOMBRE_FACES_DES);
 		int valeurTrouver = unDe.lancerDe();

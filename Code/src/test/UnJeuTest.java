@@ -26,7 +26,7 @@ class UnJeuTest {
 	}
 	
 	@Test 
-	public void getToursTest(){
+	public void getTours(){
 		
 		int tour = 0;
 		UnJeu unJeu = initJeu();
@@ -35,7 +35,7 @@ class UnJeuTest {
 	}
 			
 	@Test
-	public void initDeTest() {
+	public void initDe() {
 		assertNotNull(FabriqueDe.creerDes(JeuBunco.NOMBRE_FACES_DES, JeuBunco.NOMBRE_DES));
 	}
 	@Test
@@ -60,7 +60,7 @@ class UnJeuTest {
 	}
 	
 	@Test
-	public void calculerLeVainceurTest(){
+	public void calculerLeVainceur(){
 		
 		StrategieJeuBunco strategie = new StrategieJeuBunco();
 		JeuBunco jeu = new JeuBunco(strategie);
@@ -76,7 +76,7 @@ class UnJeuTest {
 	}
 	
 	@Test
-	public void calculerPlusieursGagnantTest() {
+	public void calculerPlusieursGagnant() {
 		
 		int leScoreGagnant = 8;
 		StrategieJeuBunco strat = new StrategieJeuBunco();
