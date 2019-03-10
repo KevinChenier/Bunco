@@ -11,7 +11,7 @@ import org.hamcrest.Matcher;
 import org.junit.Before;
 import org.junit.jupiter.api.Test;
 
-import framework.De;;
+import framework.De;
 /**
  * JUnit de test
  * Teste les situations Null , egal , non egal , les attributs et leurs differences
