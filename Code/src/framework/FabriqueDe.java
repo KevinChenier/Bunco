@@ -1,8 +1,8 @@
-package frameWork;
+package framework;
 
 public class FabriqueDe {
 
-	public FabriqueDe() { }
+	private FabriqueDe() { }
 
     /**
      * Cree une liste de des.

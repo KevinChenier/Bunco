@@ -1,4 +1,4 @@
-package frameWork;
+package framework;
 /**
  * 
  * 
@@ -75,7 +75,8 @@ public class Joueur implements Comparable<Joueur>{
 		 else if (this.getScore()<unJoueur.getScore()) {
 			return -1;
 		 }
-		 else {return 1;
+		 else {
+			 return 1;
 		 }
 	}	
 }

@@ -1,4 +1,4 @@
-package frameWork;
+package framework;
 
 public abstract class FabriqueJeu {
 

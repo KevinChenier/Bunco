@@ -1,4 +1,4 @@
-package frameWork;
+package framework;
 import java.util.Random;
 
 public class De implements Comparable<De> {
@@ -45,11 +45,10 @@ public class De implements Comparable<De> {
      * @param valeur Valeur à attribuer au dé
      */
     public void setValeur(int valeur) throws Exception {
-    	if(valeur > this.getNbFaces() || valeur < 0) {}
-    		//System.err.println("Can't set value of De because value is bigger than nbFaces or smaller than 0");
-    	else {
+    	if(valeur > this.getNbFaces() || valeur < 0)
+    		System.err.println("Can't set value of De because value is bigger than nombreFaces or smaller than 0");
+    	else
     		this.valeur = valeur;
-    	}
     }
 	
 	@Override

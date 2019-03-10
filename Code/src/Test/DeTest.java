@@ -7,7 +7,7 @@ import org.hamcrest.Matcher;
 import org.junit.Before;
 import org.junit.jupiter.api.Test;
 
-import frameWork.De;;
+import framework.De;;
 public class DeTest {
 	private De de1;
 	private De de2;

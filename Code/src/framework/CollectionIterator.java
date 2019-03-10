@@ -1,4 +1,4 @@
-package frameWork;
+package framework;
 
 public class CollectionIterator<T> implements Iterator<T> {
 
@@ -17,13 +17,11 @@ public class CollectionIterator<T> implements Iterator<T> {
      }
 
      public boolean hasNext() {
-    	 
-    	 if(index > elements.length || elements[index]==null ) {
-				return false;
-			}
-			else {
-				return true;
-			}
+    	 if(index >= elements.length || elements[index] == null) {
+    		 return false;
+    	 } else {
+    		 return true;
+    	 }
      }
-	
+	 
 }

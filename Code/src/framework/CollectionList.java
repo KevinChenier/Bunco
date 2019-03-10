@@ -1,4 +1,4 @@
-package frameWork;
+package framework;
 
 public class CollectionList<T> implements Iterable<T> {
 	//Type generique
@@ -22,6 +22,22 @@ public class CollectionList<T> implements Iterable<T> {
         	throw new IndexOutOfBoundsException("Index is out of bounds.");
         }
         return elements[index];
+    }
+    
+    /**
+     * Used to get the first element in the collection
+     * @return
+     */
+    public T getFirst() {
+    	return this.get(0);
+    }
+    
+    /**
+     * Used to get the first element in the collection
+     * @return
+     */
+    public T getLast() {
+    	return this.get(this.size - 1);
     }
 
     /**

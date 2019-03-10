@@ -1,4 +1,4 @@
-package frameWork;
+package framework;
 
 public abstract class UnJeu {
 
@@ -30,23 +30,23 @@ public abstract class UnJeu {
 	/**
      * Joue la partie jusqu'a temps que l'on atteigne le nombre maximum de tours.
      */
-    public void jouerTour() {
+    public void jouerPartie() {
     	
-        System.out.println("Nombre de joueurs : " + listeJoueurs.size() + " , Nombre de tours : " + this.getNombreToursMax() + " , Nombre de dees : " + listeDes.size());
+        System.out.println("Nombre de joueurs: " + listeJoueurs.size() + " , Nombre de tours: " + this.getNombreTours() + " , Nombre de des: " + listeDes.size());
         
-        while (this.tour++ <= this.getNombreToursMax()) {
+        while (this.tour++ < this.getNombreTours()) {
         	
             Iterator<Joueur> iterateurJoueur = this.listeJoueurs.creerIterator();
             
             while (iterateurJoueur.hasNext()) {
-                strategie.calculerScoreTour(iterateurJoueur.next(), this.listeDes, this.tour);
+                strategie.calculerScoreTourJoueur(this, iterateurJoueur.next());
             }
         }
 
         System.out.println();
 
         for (int i = 0; i < listeJoueurs.size(); i++) {
-            System.out.println("Score final : Joueur : " + listeJoueurs.get(i).getNumeroJoueur() +  ", Score : " + listeJoueurs.get(i).getScore());
+            System.out.println("Score final: Joueur: " + listeJoueurs.get(i).getNumeroJoueur() +  ", Score: " + listeJoueurs.get(i).getScore());
         }
         
         this.calculerLeVainqueur();
@@ -68,13 +68,13 @@ public abstract class UnJeu {
 	 * Retourne le nombre de tours max que le jeu fait.
 	 * @return tour.
 	 */
-	protected abstract int getNombreToursMax(); 
+	protected abstract int getNombreTours(); 
 	
 	/**
      * Calcule le vainqueur.
      */
     public void calculerLeVainqueur() {
-        strategie.calculerLeVainqueur(this.listeJoueurs);
+        strategie.calculerLeVainqueur(this);
     }
 
     /**

@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import frameWork.Joueur;
+import framework.Joueur;
 
 import org.junit.*;
 class JoueurEtTeste {

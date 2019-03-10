@@ -1,4 +1,4 @@
-package frameWork;
+package framework;
 
 public interface Iterator<T> {
 	/**
@@ -8,8 +8,8 @@ public interface Iterator<T> {
 	public boolean hasNext();
 	
 	/**
-	 * Methode qui retourne l'objet qui suit l'objet courant.
-	 * @return l'objet suivant.
+	 * Methode qui retourne l'objet a la position courante et incremente la position ensuite.
+	 * @return l'objet courant.
 	 */
 	public T next();
 }
