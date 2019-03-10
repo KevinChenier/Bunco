@@ -1,12 +1,17 @@
-package Bunco;
+package bunco;
 
 import framework.*;
 
+/**
+ * Classe qui initialise le jeu Bunco.
+ * @author Kevin
+ *
+ */
 public class JeuBunco extends UnJeu{
 	// Nombre de joueurs dans une partie.
     public static final int NOMBRE_JOUEURS = 5;
     // Nombre de tours dans une partie.
-    private static final int NOMBRE_TOURS = 6;
+    public static final int NOMBRE_TOURS = 6;
     // Nombre de des dans la partie.
     public static final int NOMBRE_DES = 3;
     // Nombre de faces d'un de.

@@ -93,5 +93,32 @@ public class CollectionList<T> implements Iterable<T> {
 	public Iterator<T> creerIterator() {
 		return new CollectionIterator<T>(this.elements);
 	}
+	
+	@Override
+    public boolean equals(Object object) {
+        boolean equals = false;
+        if (object instanceof CollectionList) {
+        	
+            CollectionList collectionList = (CollectionList) object;
+            
+            // On verifie si les deux collections sont de meme grosseur.
+            if (collectionList.size() == this.size()) {
+            	
+            	// Si les deux collections sont vides, alors les collections sont egaux.
+                if (collectionList.size() == 0) {
+                    equals = true;
+                } else {
+                	
+                	for(int i = 0; i < this.size(); i++) {
+                		equals = this.get(i).equals(collectionList.get(i));
+                		
+                		if(!equals)
+                			break;
+                	}
+                }
+            }
+        }
+        return equals;
+    }
 
 }

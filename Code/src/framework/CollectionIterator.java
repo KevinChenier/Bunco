@@ -1,5 +1,11 @@
 package framework;
 
+/**
+ * Classe utilisee pour creer l'iterateur d'une collection.
+ * @author Kevin
+ *
+ * @param <T>
+ */
 public class CollectionIterator<T> implements Iterator<T> {
 
 	private T[] elements;

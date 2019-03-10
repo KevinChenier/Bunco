@@ -1,7 +1,13 @@
-package Bunco;
+package bunco;
 
 import framework.*;
 
+/**
+ * Classe qui s'occupe des strategies utilisees dans le jeu Bunco pour calculer
+ * les vainqueurs et les points des joueurs.
+ * @author Kevin
+ *
+ */
 public class StrategieJeuBunco implements MesStrategies {
 
 	public StrategieJeuBunco() { }

@@ -1,6 +1,6 @@
 package main;
 
-import Bunco.*;
+import bunco.*;
 import framework.*;
 
 public class Main {
