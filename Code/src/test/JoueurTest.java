@@ -16,15 +16,11 @@ import framework.Joueur;
  */
 class JoueurTest {
 
-	private final static int debut = 8;
-	private final static int fin = 8;
-	
-	void test() {
-		fail("Not yet implemented");
-	}
+	private final static int DEBUT = 8;
+	private final static int FIN = 8;
 
 	@Test
-	public void NumeroJoueurs() {
+	public void numeroJoueur() {
 		
 		int valeurJoueur = 888;
 		Joueur personne = new Joueur (888);
@@ -33,37 +29,37 @@ class JoueurTest {
 	}
 	
 	@Test
-	public void LeSetNumJoueur() {
+	public void setNumeroJoueur() {
 		
-		Joueur personne = new Joueur(debut);
-		personne.setNumeroJoueur(fin);
+		Joueur personne = new Joueur(DEBUT);
+		personne.setNumeroJoueur(FIN);
 		
-		assertEquals(fin,personne.getNumeroJoueur());
+		assertEquals(FIN,personne.getNumeroJoueur());
 	}
 	@Test
-	public void LeGetNumJoueur() {
+	public void getNumeroJoueur() {
 		
-		Joueur personne = new Joueur(debut);
+		Joueur personne = new Joueur(DEBUT);
 		int unChiffre = personne.getNumeroJoueur();
 		
-		assertEquals(debut,unChiffre);
+		assertEquals(DEBUT,unChiffre);
 	}
 	
 	@Test	
-	public void setScoresJoueur() {
+	public void setScoreJoueur() {
 		
 		int score = 8;
-		Joueur personne = new Joueur(debut);
+		Joueur personne = new Joueur(DEBUT);
 		
 		personne.setScore(score);
 		
 		assertEquals(personne.getScore(),score );	 
 	}
 	@Test
-	public void getScoresJoueur() {
+	public void getScoreJoueur() {
 		
 		int score = 8;
-		Joueur joueur = new Joueur(debut);
+		Joueur joueur = new Joueur(DEBUT);
 		
 		joueur.setScore(score);
 		

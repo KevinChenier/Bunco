@@ -17,7 +17,7 @@ import framework.*;
 
 class UnJeuTest {
 	
-	public UnJeu initJeu() {
+	private UnJeu initJeu() {
 		
 		StrategieJeuBunco strategie = new StrategieJeuBunco();
 		JeuBunco jeu = new JeuBunco(strategie);
@@ -44,7 +44,7 @@ class UnJeuTest {
 	}
 	
 	@Test
-	public void getListeDe() {
+	public void getListeDes() {
 		
 		UnJeu unJeu = initJeu();
 		
@@ -76,7 +76,7 @@ class UnJeuTest {
 	}
 	
 	@Test
-	public void calculerPlusieursGagnant() {
+	public void calculerPlusieursGagnants() {
 		
 		int leScoreGagnant = 8;
 		StrategieJeuBunco strat = new StrategieJeuBunco();

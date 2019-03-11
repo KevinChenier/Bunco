@@ -33,9 +33,9 @@ public abstract class UnJeu {
      */
     public void jouerPartie() {
     	
-        System.out.println("Nombre de joueurs: " + listeJoueurs.size() + " , Nombre de tours: " + this.getNombreTours() + " , Nombre de des: " + listeDes.size());
+        System.out.println("Nombre de joueurs: " + listeJoueurs.size() + " , Nombre de tours: " + this.getNombreToursMax() + " , Nombre de des: " + listeDes.size());
         
-        while (this.tour++ < this.getNombreTours()) {
+        while (this.tour++ < this.getNombreToursMax()) {
         	
             Iterator<Joueur> iterateurJoueur = this.listeJoueurs.creerIterator();
             
@@ -69,7 +69,7 @@ public abstract class UnJeu {
 	 * Retourne le nombre de tours max que le jeu fait.
 	 * @return tour.
 	 */
-	protected abstract int getNombreTours(); 
+	protected abstract int getNombreToursMax(); 
 	
 	/**
      * Calcule le vainqueur.

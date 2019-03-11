@@ -36,7 +36,7 @@ public class JeuBunco extends UnJeu{
 	}
 
 	@Override
-	protected int getNombreTours() {
+	protected int getNombreToursMax() {
 		return NOMBRE_TOURS;
 	}
 

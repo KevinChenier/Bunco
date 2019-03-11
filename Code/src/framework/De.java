@@ -69,11 +69,11 @@ public class De implements Comparable<De> {
 	
 	
 	@Override
-    public boolean equals(Object obj) {
+    public boolean equals(Object object) {
 
-        if (obj instanceof De) {
+        if (object instanceof De) {
         	
-            De de = (De) obj;
+            De de = (De) object;
             
             if(de.getNbFaces() == this.nombreFaces && de.getValeur() == this.valeur) {
             	return true;

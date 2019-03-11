@@ -48,11 +48,11 @@ public class Joueur implements Comparable<Joueur>{
 	}
 	
 	@Override
-	public boolean equals(Object obj) {
+	public boolean equals(Object object) {
 
-        if (obj instanceof Joueur) {
+        if (object instanceof Joueur) {
         	
-            Joueur unJoueur = (Joueur) obj;
+            Joueur unJoueur = (Joueur) object;
             
             if(unJoueur.getScore() == this.score && unJoueur.getNumeroJoueur() == this.numero)
             {

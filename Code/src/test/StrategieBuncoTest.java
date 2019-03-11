@@ -15,7 +15,7 @@ import static org.junit.Assert.*;
  */
 public class StrategieBuncoTest {
 
-    private CollectionList<Joueur> listeJoueur;
+    private CollectionList<Joueur> listeJoueurs;
     private CollectionList<De> listeDes;
     private JeuBunco jeu;
     private StrategieJeuBunco strategieBunco;
@@ -26,7 +26,7 @@ public class StrategieBuncoTest {
         strategieBunco = new StrategieJeuBunco();
         jeu = new JeuBunco(strategieBunco);
         
-        listeJoueur = jeu.getListeJoueurs();
+        listeJoueurs = jeu.getListeJoueurs();
         listeDes = jeu.getListeDes();
         
         jeu.jouerPartie();
@@ -109,12 +109,12 @@ public class StrategieBuncoTest {
         
         CollectionList<Joueur> listeVainqueurs = new CollectionList<>();
         
-        for (int i = 0; i < listeJoueur.size(); i++) {
-            listeJoueur.get(i).setScore(1);
+        for (int i = 0; i < listeJoueurs.size(); i++) {
+            listeJoueurs.get(i).setScore(1);
         }
-        listeJoueur.getFirst().setScore(2);
+        listeJoueurs.getFirst().setScore(2);
         
-        listeVainqueurs.add(listeJoueur.getFirst());
+        listeVainqueurs.add(listeJoueurs.getFirst());
         
         assertEquals(listeVainqueurs, strategieBunco.calculerLeVainqueur(jeu));
     }
@@ -136,10 +136,10 @@ public class StrategieBuncoTest {
         
         CollectionList<Joueur> listeVainqueurs = new CollectionList<>();
         
-        for (int i = 0; i < listeJoueur.size(); i++) {
+        for (int i = 0; i < listeJoueurs.size(); i++) {
         	
-            listeJoueur.get(i).setScore(0);
-            listeVainqueurs.add(listeJoueur.get(i));
+            listeJoueurs.get(i).setScore(0);
+            listeVainqueurs.add(listeJoueurs.get(i));
         }
         assertEquals(listeVainqueurs, strategieBunco.calculerLeVainqueur(jeu));
     }
@@ -152,13 +152,13 @@ public class StrategieBuncoTest {
     	
         CollectionList<Joueur> listeVainqueurs = new CollectionList<>();
         
-        for (int i = 0; i < listeJoueur.size(); i++) {
-            listeJoueur.get(i).setScore(0);
+        for (int i = 0; i < listeJoueurs.size(); i++) {
+            listeJoueurs.get(i).setScore(0);
         }
         
         for (int i = 0; i < XVainqueurs; i++) {
-            listeJoueur.get(i).setScore(2);
-            listeVainqueurs.add(listeJoueur.get(i));
+            listeJoueurs.get(i).setScore(2);
+            listeVainqueurs.add(listeJoueurs.get(i));
         }
         assertEquals(listeVainqueurs, strategieBunco.calculerLeVainqueur(jeu));
     }
